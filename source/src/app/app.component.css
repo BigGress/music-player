@@ -6,3 +6,8 @@ html, body{
 a.active {
   background-color: gray;
 }
+
+body {
+  min-width: 360px;
+  margin: 0;
+}

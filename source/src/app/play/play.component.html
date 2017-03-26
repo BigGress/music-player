@@ -1,0 +1,15 @@
+<header>
+  <div layout="row" layout-align="end center" class="header">
+    <button (click)="toggle()" *ngIf="isSearch" class="back-btn">
+      <span class="back"></span>
+      <span>返回</span>
+    </button>
+    <span flex></span>
+    <play-list-search (clickSend)="searchSong($event)"></play-list-search>
+  </div>
+</header>
+<!--<a (click)="toggle()">test{{isSearch}}</a>-->
+<main [class.search-page]="isSearch">
+  <play-list [songs]="songs"></play-list>
+  <play-search-list [songs]="searchSongs"></play-search-list>
+</main>

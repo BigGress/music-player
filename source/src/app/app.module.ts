@@ -25,6 +25,8 @@ import { AppState, InternalStateType } from "./app.service";
 
 import "../styles/styles.scss";
 import "../styles/headings.css";
+// 模块
+import { PlayModule } from "./play";
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -48,6 +50,7 @@ type StoreType = {
   ],
   imports: [ // import Angular"s modules
     CommonModule,
+    PlayModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   providers: [ // expose our Services and Providers into Angular"s dependency injection

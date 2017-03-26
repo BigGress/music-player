@@ -1,0 +1,60 @@
+header {
+  padding-right: 16px;
+  box-shadow: 1px 1px 1px rgb(52, 52, 52);
+  color: #333;
+  background: linear-gradient(to top, rgb(27, 27, 27), rgb(52, 52, 52));
+}
+.header {
+  height: 50px; 
+  width: 100%;
+}
+
+.back-btn {
+  background: linear-gradient(to top, rgb(27, 27, 27), rgb(52, 52, 52));
+  color: rgb(230, 230, 230);
+  font-size: 14px;
+  line-height: 14px;
+
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  vertical-align: text-top;
+
+  margin-left: 16px;
+
+  box-shadow: 0px 0px 8px rgb(52, 52, 52);
+
+  padding: 4px 8px;
+
+  span {
+    vertical-align: middle;
+  }
+}
+
+.back {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+
+  background-size: 100% 100%;
+  background-image: url("/assets/icon/back.png");
+}
+
+main {
+  position: relative;
+  transition: all .4s ease;
+
+  &.search-page {
+    transform: translateX(-100%);
+  }
+
+  play-list, play-search-list {
+    position: absolute;
+    width: 100%;
+    display: block;
+  }
+
+  play-search-list {
+    left: 100%;
+  }
+}

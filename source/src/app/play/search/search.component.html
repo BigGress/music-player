@@ -1,0 +1,7 @@
+<form name="search" #searchForm="ngForm"
+      class="search-form" novalidate>
+  <button class="search-btn" (click)="onsubmit(searchForm)"></button>
+  <input type="search" name="search" [(ngModel)]="search" required
+         [@toggleInput]="hideInput"
+         class="search-input"/>
+</form>
