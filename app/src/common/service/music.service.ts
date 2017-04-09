@@ -125,7 +125,7 @@ export class MusicService {
    */
   private getSongs() {
     const songs = JSON.parse(localStorage.getItem("songs"));
-    this.playSongs = songs;
+    this.playSongs = songs || [];
     return this.playSongs;
   }
 
