@@ -1,6 +1,8 @@
 import { 
   Component,
   OnInit,
+  ViewChild,
+  ElementRef,
 } from "@angular/core";
 import { Http } from "@angular/http";
 
@@ -15,6 +17,10 @@ export class PlayComponent implements OnInit {
   songs: any[] = [];
   searchSongs: any[] = [];
 
+  player: HTMLAudioElement;
+
+  thePlaySrc: string;
+
   public isSearch: boolean = false;
 
   constructor(
@@ -23,6 +29,7 @@ export class PlayComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    
     this.songs = this.service.playSongs;
   }
 
@@ -60,4 +67,24 @@ export class PlayComponent implements OnInit {
     this.service.deleteSong(song);
     this.getSong();
   }
+
+  public playSong(song: any) {
+    // this.service.getSongUrl(song.id).subscribe((songs) => {
+    //   this.thePlaySrc = songs.mp3Url;
+    //   this.makePlayer(this.thePlaySrc)
+    //   console.log("played");
+    // })
+  }
+
+  private makePlayer(src: string) {
+    if (this.player) {
+      this.player.pause();
+    }
+    this.player = new Audio();
+    this.player.src = src;
+    this.player.loop = true;
+    this.player.play();
+    return this.player;
+  }
+
 }

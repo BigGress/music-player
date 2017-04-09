@@ -1,0 +1,49 @@
+.play-item {
+  width: 100%;
+  padding: 4px 0;
+  border-bottom: 1px solid rgb(155, 155, 155);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: 0 8px;
+  background-size: 100% 100%;
+
+  transition: all .4s ease;
+
+  &.play {
+    background-image: url("/assets/icon/play.png");    
+  }
+
+  &.pause {
+    background-image: url("/assets/icon/pause.png");
+  }
+
+  &.add {
+    background-image: url("/assets/icon/add.png");
+  }
+
+  &.delete {
+    background-image: url("/assets/icon/delete.png");
+  }
+  
+  &.cancel {
+    background-image: url("/assets/icon/cancel.png");
+  }
+}
+
+h2, h4 {
+  font-weight: 500;
+}
+
+h2 {
+  margin: 0 4px;
+  font-size: 1.2em;
+}
+
+h4 {
+  margin: 0 4px;
+  font-size: .8em;
+}

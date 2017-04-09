@@ -1,0 +1,21 @@
+<div class="player-box" layout="row" layout-align="start center"
+     *ngIf="playingSong">
+  <img class="album-pic" [src]="playingSong.songDetail.album.picUrl" alt=""/>
+  <div class="info" (click)="openAudioModal()">
+    <h4>{{ playingSong?.name }}</h4>
+    <h6>{{ playingSong?.artist }}</h6>
+    <!--{{music.player.src}}-->
+  </div>
+  <span flex></span>
+  <div class="player">
+    <button ion-button round outline class="play-button circle"
+            [class.pause]="music.player.paused"
+            (click)="toggleSong($event)">
+      <ion-icon [name]="music.player.paused ? 'play' : 'pause'"></ion-icon>
+    </button>
+    <button ion-button round outline class="circle next"
+            (click)="nextSong($event)">
+      <ion-icon name="fastforward"></ion-icon>
+    </button>
+  </div>
+</div>

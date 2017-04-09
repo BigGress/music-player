@@ -19,7 +19,7 @@ import { AppState } from "./app.service";
     "./app.component.css"
   ],
   template: `
-    <main>
+    <main class="index">
       <router-outlet></router-outlet>
     </main>
   `

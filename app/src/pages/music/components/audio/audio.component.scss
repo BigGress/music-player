@@ -1,0 +1,74 @@
+.player-box {
+  width: 100%;
+  height: 53px;
+
+  position: fixed;
+  bottom: 0;
+
+  box-shadow: 0 -1px 1px rgba(56,126,245, .1);
+
+  background: #fff;
+
+  padding: 4px 8px;
+
+  .album-pic {
+    width: 45px;
+    height: 45px;
+  }
+
+  .info {
+    margin-left: 1rem;
+    width: calc(100% - 7.2rem - 70px);
+
+    h4, h6 {
+      margin: 0;
+    }
+
+    h4 {
+      font-size: 1.6rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+      margin-top: 6px;
+
+      color: rgba(0, 0, 0, .4);
+    }
+  }
+
+  .player {
+    .circle {
+      margin: 0;
+      padding: 0;
+      width: 3.6rem;
+      height: 3.6rem;
+      font-size: 1.8rem;
+    }
+
+    .play-button {
+      margin-right: 1rem;
+
+      ion-icon {
+        margin-top: 2px;
+        margin-left: 1px;
+      }
+
+      &.pause {
+        ion-icon {
+          margin-left: 4px;
+          margin-top: 1px;
+        }
+      }
+
+    }
+
+    .next {
+      font-size: 1.7rem;
+
+      ion-icon {
+        margin-top: 2px;
+        margin-left: 2px;
+      }
+    }
+  }
+}

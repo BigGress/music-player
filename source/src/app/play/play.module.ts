@@ -9,6 +9,8 @@ import { SearchComponent } from "./search/search.component";
 
 import { PlayListComponent } from "./play-list/playList.component";
 import { PlaySearchListComponent } from "./play-search-list/playSearchList.component";
+import { PlayItemComponent } from "./play-item/playItem.component";
+import { PlayAudioComponent } from "./play-audio/playAudio.component";
 
 import { PlayService } from "./play.service";
 
@@ -22,6 +24,8 @@ import { PlayService } from "./play.service";
     SearchComponent,
     PlayListComponent,
     PlaySearchListComponent,
+    PlayItemComponent,
+    PlayAudioComponent,
   ],
   imports: [
     CommonModule,

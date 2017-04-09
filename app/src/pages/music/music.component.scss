@@ -1,0 +1,43 @@
+.toolbar-content {
+  display: flex;
+}
+
+.page-title {
+  .toolbar-title {
+    line-height: 48px;
+  }
+}
+
+.circle-button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+
+  &.no-shadow {
+    box-shadow: none !important;
+  }
+}
+
+.search-parent-box {
+  width: calc(90% - 40px);
+  form {
+    width: 100%;
+  }
+}
+
+#search-input {
+  border: none;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  color: rgba(255,255,255,0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+  line-height: 26px;
+
+  font-size: 1.6rem;
+}
+
+.list {
+  margin-bottom: 53px;
+}

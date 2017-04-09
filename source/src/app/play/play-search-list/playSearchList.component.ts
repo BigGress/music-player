@@ -9,6 +9,8 @@ import {
   Input,
 } from "@angular/core";
 
+import { PlayService } from "../play.service";
+
 import { makeRightToLeft } from "../../animation/page/right-to-left";
 
 @Component({
@@ -24,7 +26,13 @@ import { makeRightToLeft } from "../../animation/page/right-to-left";
 export class PlaySearchListComponent implements OnInit {
   @Input() songs: any[]
 
-  constructor() { }
+  constructor(
+    private service: PlayService
+  ) { }
 
   ngOnInit() {}
+
+  addSong(song) {    
+    this.service.addSong(song);
+  }
 }

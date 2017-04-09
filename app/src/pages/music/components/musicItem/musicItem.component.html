@@ -1,0 +1,21 @@
+<button ion-item class="music-item-box"
+        (click)="clickItem($event)">
+  <div layout="row" layout-align="start center"
+       class="">
+    <div class="left-buttons">
+      <i class="icon md-primary" *ngIf="playing">
+        <ion-icon name="musical-notes"></ion-icon>
+      </i>
+    </div>
+    <div class="info">
+      <h4>{{song.name}}</h4>
+      <h6>{{song.artist}}</h6>
+    </div>
+    <span flex></span>
+    <div class="right-buttons">
+      <button ion-button icon-only round clear>
+        <ion-icon md="md-more"></ion-icon>
+      </button>
+    </div>
+  </div>
+</button>

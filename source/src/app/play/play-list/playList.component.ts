@@ -6,9 +6,14 @@ import {
   style,
   animate,
   transition,
+  Input,
+  Output,
+  EventEmitter,
 } from "@angular/core";
 
 import { makeRightToLeft } from "../../animation/page/right-to-left";
+
+import { PlayService } from "../play.service";
 
 @Component({
   // moduleId: module.id,
@@ -22,7 +27,13 @@ import { makeRightToLeft } from "../../animation/page/right-to-left";
   // },
 })
 export class PlayListComponent implements OnInit {
-  constructor() { }
+  @Input() songs: any[];
 
-  ngOnInit() { }
+  constructor(
+    private service: PlayService
+  ) { }
+
+  ngOnInit() {
+    
+  }
 }

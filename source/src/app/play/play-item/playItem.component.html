@@ -1,9 +1,13 @@
-<div class="play-item" layout="row">
-    <span>play</span>
-    <span>
-      1
-      name
-    </span>
-    <span>add</span>
-    <span>delete</span>
+<div class="play-item" layout="row" layout-align="start center">
+    <span class="icon"  *ngIf="type == 0" (click)="play()"
+          [ngClass]="{'play': !song.status, 'pause': song.status}"></span>
+    <div>
+      <h2>{{song.name}}</h2>
+      <h4>{{song.artist}}</h4>
+    </div>
+    <span flex></span>
+    <span class="icon add" *ngIf="type == 1"
+          (click)="add()"></span>
+    <span class="icon delete" *ngIf="type == 0"
+          (click)="deletes()"></span>
 </div>  

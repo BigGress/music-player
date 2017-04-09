@@ -11,3 +11,7 @@ body {
   min-width: 360px;
   margin: 0;
 }
+
+.index {
+  height: 100%;
+}

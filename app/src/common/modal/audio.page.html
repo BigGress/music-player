@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="primary" class="audio-modal">
+    <ion-buttons left>
+      <button ion-button (click)="close()" class="back-button-page">
+        <ion-icon name="md-arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      {{music.playingSong.name}}
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="vinyl vinyl-1 playing" #drop
+       [class.paused]="music.player.paused">
+    <div class="grooves"></div>
+    <div class="light"></div>
+    <div class="light-alt"></div>
+    <div class="macaron">
+      <img [src]="music?.playingSong.songDetail.album.picUrl" alt="">
+    </div>
+  </div>
+
+  <div class="play-line" layout="row" layout-align="center center">
+    <div class="played-time">
+      {{ currentTime * 1000 | date:'mm:ss' }}
+    </div>
+    <div class="line-box"
+         #playLine>
+      <div class="line">
+        <div class="played-line primary"
+            [style.width.%]="currentTime * 1000 / music?.playingSong.songDetail.duration * 100">
+            <div class="play-circle primary"></div>
+        </div>
+      </div>
+    </div>
+    <div class="total-time">
+      {{ music?.playingSong.songDetail.duration | date:'mm:ss'}}
+    </div>
+  </div>
+
+  <div class="controllers" layout="row" layout-align="center center">
+    <!--shuffle-->
+    <button ion-button only-icon clear class="play-type" (click)="togglePlayType()">
+      <ion-icon [name]="music.cycle === 2 ? 'shuffle' : 'repeat'">
+        <span class="little-icon" *ngIf="music.cycle === 0">1</span>
+      </ion-icon>
+    </button>
+    <button (click)="preSong()" ion-button round outline class="ctrl-button pre-song">
+      <ion-icon name="rewind"></ion-icon>
+    </button>
+    <button (click)="playSong()" ion-button round outline class="ctrl-button play-button"
+            [class.paused]="!music.player.paused">
+      <ion-icon [name]="music.player.paused ? 'play' : 'pause'"></ion-icon>
+    </button>
+    <button (click)="nextSong()" ion-button round outline class="ctrl-button next-song">
+      <ion-icon name="fastforward"></ion-icon>
+    </button>
+
+    <button ion-button only-icon clear class="more-button">
+      <ion-icon name="md-more"></ion-icon>
+    </button>
+  </div>
+
+</ion-content>
